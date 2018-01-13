@@ -7,7 +7,6 @@ using AutoMapper;
 using HotelsGarden.Models.Domain;
 using HotelsGarden.Models.View;
 using Newtonsoft.Json;
-using ExpdiaOffers = HotelsGarden.Models.Domain.Expedia.Offers;
 
 namespace HotelsGarden.Services
 {
@@ -23,12 +22,12 @@ namespace HotelsGarden.Services
         public async Task<Offers> GetOffersAsync(SearchFilters filters)
         {
             var client = new HttpClient();
-            var contentType = new MediaTypeWithQualityHeaderValue("application/json");
+            var contentType = new MediaTypeWithQualityHeaderValue(Constants.AcceptHeaderMediaType);
 
-            client.BaseAddress = new Uri("https://offersvc.expedia.com");
+            client.BaseAddress = new Uri(Constants.BaseApiUrl);
             client.DefaultRequestHeaders.Accept.Add(contentType);
 
-            var resourceUrl = String.Concat("/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel", GetQueryString(filters));
+            var resourceUrl = String.Concat(Constants.BaseResourceUrl, GetQueryString(filters));
             var response = await client.GetAsync(resourceUrl);
             var stringData = await response.Content.ReadAsStringAsync();
 
@@ -39,7 +38,8 @@ namespace HotelsGarden.Services
 
         private string GetQueryString(SearchFilters filters)
         {
-            if (filters == null) {
+            if (filters == null)
+            {
                 return String.Empty;
             }
 

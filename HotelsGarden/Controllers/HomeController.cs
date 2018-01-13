@@ -21,7 +21,6 @@ namespace HotelsGarden.Controllers
             return View(new Index());
         }
 
-
         [HttpPost]
         public IActionResult Index(Index model)
         {
