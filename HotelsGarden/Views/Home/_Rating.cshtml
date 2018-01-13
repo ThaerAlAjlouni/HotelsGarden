@@ -1,0 +1,23 @@
+﻿@model HotelInfo
+@using HotelsGarden.Models.View
+
+@{
+    var stars = double.Parse(Model.HotelStarRating);
+}
+
+<small class="text-@(Model.HotelGuestReviewRating > 2.5 ? "success" : "danger")">
+    (
+    @for (int i = 0; i < stars; i++)
+    {
+        <i class="glyphicon glyphicon-star"></i>
+    }
+
+    @if (stars <= 4)
+    {
+        @for (int j = 0; j < (5 - stars); j++)
+        {
+            <i class="glyphicon glyphicon-star-empty"></i>
+        }
+    }
+    ▬ Rated: @Model.HotelGuestReviewRating / 5 by @Model.HotelReviewTotal guests)
+</small>

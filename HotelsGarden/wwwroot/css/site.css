@@ -49,6 +49,24 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background: #101010;
-    color: #eee;
+    background-color: #ffcb00;
+    color: #00355f;
+    border-top: #00355f 1px solid;
 }
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.navbar-inverse {
+    background-color: #ffcb00;
+    border-color: #00355f;
+    color: #00355f;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #00355f;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+        color: #00355f;
+    }

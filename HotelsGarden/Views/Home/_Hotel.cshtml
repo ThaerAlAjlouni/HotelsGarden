@@ -1,0 +1,71 @@
+﻿@model Hotel
+@using HotelsGarden.Models.View
+
+<div class="panel panel-default">
+    <div class="panel-heading pointer" data-toggle="collapse" data-target="#@Model.HotelInfo.HotelId">
+        <div class="row">
+            <div class="col-md-2 text-center"><img src="@Model.HotelInfo.HotelImage" class="img-responsive img-thumbnail" /></div>
+            <h4 class="col-md-10 text-primary">
+                @Model.HotelInfo.HotelName @Html.Partial("_Rating", Model.HotelInfo)
+                <small class="pull-right m-t-20"> <del>$@Model.HotelPricingInfo.CrossOutPriceValue</del><strong> →  $@Model.HotelPricingInfo.AveragePriceValue</strong> </small> <br />
+                <a href="https://www.google.com/maps/?q=@Model.HotelInfo.HotelLatitude,@Model.HotelInfo.HotelLongitude" target="_blank"><small class="text-muted"> <i class="glyphicon glyphicon-map-marker"></i> @Model.Destination.LongName</small></a>
+            </h4>
+        </div>
+    </div>
+    <div id="@Model.HotelInfo.HotelId" class="collapse panel-body">
+        <div class="row">
+            <div class="col-xs-12 m-t-20 pull-left offer-date-range">
+                <ul class="list-group">
+                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Travel Start Date:</strong> @Model.OfferDateRange.TravelStartDateString</li>
+                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Travel End Date:</strong> @Model.OfferDateRange.TravelEndDateString</li>
+                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Stay:</strong> @Model.OfferDateRange.LengthOfStay @(Model.OfferDateRange.LengthOfStay > 1 ? "Days" : "Day")</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 m-t-20 pull-left pricing-info">
+                <ul class="list-group">
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Average Price Value:</strong> $@Model.HotelPricingInfo.AveragePriceValue </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Cross-Out Price Value:</strong> <del>$@Model.HotelPricingInfo.CrossOutPriceValue</del> </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Currency:</strong> @Model.HotelPricingInfo.Currency </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Drr:</strong> @Model.HotelPricingInfo.Drr </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Original Price per Night:</strong> $@Model.HotelPricingInfo.OriginalPricePerNight </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Percent Savings:</strong> @Model.HotelPricingInfo.PercentSavings% </li>
+                    <li class="list-group-item col-xs-12 col-md-12 text-center lead"> <strong>Total Price Value:</strong> $@Model.HotelPricingInfo.TotalPriceValue </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 m-t-20 pull-left urgency-info">
+                <ul class="list-group">
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Air Attach Enabled:</strong> @Model.HotelUrgencyInfo.AirAttachEnabled </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Air Attach Remaining Time:</strong> @Model.HotelUrgencyInfo.AirAttachRemainingTime </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Almost Sold Status:</strong> @Model.HotelUrgencyInfo.AlmostSoldStatus </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Last Booked Time:</strong> @Model.HotelUrgencyInfo.LastBookedTime </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Link:</strong> @Model.HotelUrgencyInfo.Link </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of People Booked:</strong> @Model.HotelUrgencyInfo.NumberOfPeopleBooked </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of People Viewing:</strong> @Model.HotelUrgencyInfo.NumberOfPeopleViewing </li>
+                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of Rooms Left:</strong> @Model.HotelUrgencyInfo.NumberOfRoomsLeft</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 m-t-20 pull-left destination">
+                <ul class="list-group">
+                    <li class="list-group-item col-md-6"> <strong>Associated Multi City Region Id:</strong> @Model.Destination.AssociatedMultiCityRegionId </li>
+                    <li class="list-group-item col-md-6"> <strong>City:</strong> @Model.Destination.City </li>
+                    <li class="list-group-item col-md-6"> <strong>Country:</strong> @Model.Destination.Country </li>
+                    <li class="list-group-item col-md-6"> <strong>Non-Localized City:</strong> @Model.Destination.NonLocalizedCity </li>
+                    <li class="list-group-item col-md-6"> <strong>Province:</strong> @Model.Destination.Province </li>
+                    <li class="list-group-item col-md-6"> <strong>Region ID:</strong> @Model.Destination.RegionID </li>
+                    <li class="list-group-item col-md-6"> <strong>Short Name:</strong> @Model.Destination.ShortName </li>
+                    <li class="list-group-item col-md-6"> <strong>Tla:</strong> @Model.Destination.Tla </li>
+                    <li class="list-group-item col-md-12"> <strong>Long Name:</strong> @Model.Destination.LongName </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 m-t-20 pull-left Model-urls">
+                <ul class="list-group">
+                    <li class="list-group-item"> <strong>Info site:</strong> <a href="@Model.HotelUrls.HotelInfosite" target="_blank">@Model.HotelUrls.HotelInfosite</a> </li>
+                    <li class="list-group-item"> <strong>Search Result:</strong> <a href="@Model.HotelUrls.HotelSearchResult" target="_blank">@Model.HotelUrls.HotelSearchResult</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
