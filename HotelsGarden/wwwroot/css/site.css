@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 }
 
 /* Wrapping element */
@@ -32,4 +32,23 @@
     .carousel-caption {
         display: none;
     }
+}
+
+.m-15 {
+    margin: 15px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.fixed-bottom {
+    padding: 15px;
+    position: fixed;
+    height: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #101010;
+    color: #eee;
 }
