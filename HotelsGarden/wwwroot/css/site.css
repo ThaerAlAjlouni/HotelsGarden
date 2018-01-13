@@ -70,3 +70,9 @@
     .navbar-inverse .navbar-nav > li > a {
         color: #00355f;
     }
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
