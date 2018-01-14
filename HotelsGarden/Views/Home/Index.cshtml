@@ -16,7 +16,7 @@
     @if (Model.Offers.Hotels.Any())
     {
         <hr />
-        <div class="row">
+        <div class="row" id="results">
             <h3 class="text-warning">Search results: (@Model.Offers.Hotels.Count()) <small><i class="text-muted pull-right">Click on any hotel below to see the details</i></small></h3>
         </div>
         @foreach (Hotel hotel in Model.Offers.Hotels)
@@ -25,3 +25,16 @@
         }
     }
 </div>
+
+@section Scripts{
+    @if (Model.Offers.Hotels.Any())
+    {
+        <script>
+            $(document).ready(function () {
+                $('html, body').animate({
+                    scrollTop: $("#results").offset().top - 50
+                }, 1000);
+            });
+        </script>
+    }
+}
