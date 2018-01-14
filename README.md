@@ -1,5 +1,5 @@
 # HotelsGarden
-A test app build over Expedia's test API
+A test app built over Expedia's test API
 
 # Setup Instructions
 
