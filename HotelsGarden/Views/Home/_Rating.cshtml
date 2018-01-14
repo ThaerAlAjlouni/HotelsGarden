@@ -2,10 +2,10 @@
 @using HotelsGarden.Models.View
 
 @{
-    var stars = double.Parse(Model.HotelStarRating);
+    var stars = double.Parse(Model.StarRating);
 }
 
-<small class="text-@(Model.HotelGuestReviewRating > 2.5 ? "success" : "danger")">
+<small class="text-@(Model.GuestReviewRating > 2.5 ? "success" : "danger")">
     (
     @for (int i = 0; i < stars; i++)
     {
@@ -19,5 +19,5 @@
             <i class="glyphicon glyphicon-star-empty"></i>
         }
     }
-    ▬ Rated: @Model.HotelGuestReviewRating / 5 by @Model.HotelReviewTotal guests)
+    ▬ Rated: @Model.GuestReviewRating / 5 by @Model.ReviewTotal guests)
 </small>

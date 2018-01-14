@@ -19,16 +19,16 @@ namespace HotelsGarden.Mappers
 
             CreateMap<Models.Domain.Expedia.HotelInfo, HotelInfo>()
                 .ForMember(
-                    dest => dest.HotelImage,
-                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.HotelImageUrl))));
+                    dest => dest.Image,
+                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.ImageUrl))));
 
             CreateMap<Models.Domain.Expedia.HotelUrls, HotelUrls>()
                 .ForMember(
-                    dest => dest.HotelInfosite,
-                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.HotelInfositeUrl)))
+                    dest => dest.Infosite,
+                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.InfositeUrl)))
                 ).ForMember(
-                    dest => dest.HotelSearchResult,
-                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.HotelSearchResultUrl)))
+                    dest => dest.SearchResult,
+                    opts => opts.MapFrom(src => new Uri(Uri.UnescapeDataString(src.SearchResultUrl)))
                 );
 
             CreateMap<Models.Domain.Expedia.OfferDateRange, OfferDateRange>()

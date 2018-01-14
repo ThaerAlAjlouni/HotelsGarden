@@ -11,15 +11,15 @@ namespace HotelsGarden.Models.View
         public Destination Destination { get; set; }
 
         [ReadOnly(true)]
-        public HotelInfo HotelInfo { get; set; }
+        public HotelInfo Info { get; set; }
 
         [ReadOnly(true)]
-        public HotelUrgencyInfo HotelUrgencyInfo { get; set; }
+        public HotelUrgencyInfo UrgencyInfo { get; set; }
 
         [ReadOnly(true)]
-        public HotelPricingInfo HotelPricingInfo { get; set; }
+        public HotelPricingInfo PricingInfo { get; set; }
 
         [ReadOnly(true)]
-        public HotelUrls HotelUrls { get; set; }
+        public HotelUrls Urls { get; set; }
     }
 }

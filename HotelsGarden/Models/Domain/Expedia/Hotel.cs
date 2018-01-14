@@ -14,15 +14,15 @@ namespace HotelsGarden.Models.Domain.Expedia
         public Destination Destination { get; set; }
 
         [JsonProperty("hotelInfo")]
-        public HotelInfo HotelInfo { get; set; }
+        public HotelInfo Info { get; set; }
 
         [JsonProperty("hotelUrgencyInfo")]
-        public HotelUrgencyInfo HotelUrgencyInfo { get; set; }
+        public HotelUrgencyInfo UrgencyInfo { get; set; }
 
         [JsonProperty("hotelPricingInfo")]
-        public HotelPricingInfo HotelPricingInfo { get; set; }
+        public HotelPricingInfo PricingInfo { get; set; }
 
         [JsonProperty("hotelUrls")]
-        public HotelUrls HotelUrls { get; set; }
+        public HotelUrls Urls { get; set; }
     }
 }

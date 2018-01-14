@@ -6,52 +6,52 @@ namespace HotelsGarden.Models.View
     public class HotelInfo
     {
         [ReadOnly(true)]
-        public string HotelId { get; set; }
+        public string Id { get; set; }
 
         [ReadOnly(true)]
-        public string HotelName { get; set; }
+        public string Name { get; set; }
 
         [ReadOnly(true)]
-        public string LocalizedHotelName { get; set; }
+        public string LocalizedName { get; set; }
 
         [ReadOnly(true)]
-        public string HotelDestination { get; set; }
+        public string Destination { get; set; }
 
         [ReadOnly(true)]
-        public string HotelDestinationRegionID { get; set; }
+        public string DestinationRegionID { get; set; }
 
         [ReadOnly(true)]
-        public string HotelLongDestination { get; set; }
+        public string LongDestination { get; set; }
 
         [ReadOnly(true)]
-        public string HotelStreetAddress { get; set; }
+        public string StreetAddress { get; set; }
 
         [ReadOnly(true)]
-        public string HotelCity { get; set; }
+        public string City { get; set; }
 
         [ReadOnly(true)]
-        public string HotelProvince { get; set; }
+        public string Province { get; set; }
 
         [ReadOnly(true)]
-        public string HotelCountryCode { get; set; }
+        public string CountryCode { get; set; }
 
         [ReadOnly(true)]
-        public double HotelLatitude { get; set; }
+        public double Latitude { get; set; }
 
         [ReadOnly(true)]
-        public double HotelLongitude { get; set; }
+        public double Longitude { get; set; }
 
         [ReadOnly(true)]
-        public string HotelStarRating { get; set; }
+        public string StarRating { get; set; }
 
         [ReadOnly(true)]
-        public double HotelGuestReviewRating { get; set; }
+        public double GuestReviewRating { get; set; }
 
         [ReadOnly(true)]
-        public int HotelReviewTotal { get; set; }
+        public int ReviewTotal { get; set; }
 
         [ReadOnly(true)]
-        public Uri HotelImage { get; set; }
+        public Uri Image { get; set; }
 
         [ReadOnly(true)]
         public bool VipAccess { get; set; }

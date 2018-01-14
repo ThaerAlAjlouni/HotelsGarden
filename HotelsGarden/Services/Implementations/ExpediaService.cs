@@ -37,9 +37,9 @@ namespace HotelsGarden.Services
             var mappedOffers = mapper.Map<Offers>(data.Offers);
 
             mappedOffers.Hotels = mappedOffers.Hotels
-                .OrderByDescending(hotel => hotel.HotelInfo.HotelGuestReviewRating)
-                .ThenByDescending(hotel => hotel.HotelInfo.HotelStarRating)
-                .ThenBy(hotel => hotel.HotelPricingInfo.AveragePriceValue)
+                .OrderByDescending(hotel => hotel.Info.GuestReviewRating)
+                .ThenByDescending(hotel => hotel.Info.StarRating)
+                .ThenBy(hotel => hotel.PricingInfo.AveragePriceValue)
                 .ToList();
 
             return mappedOffers;

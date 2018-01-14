@@ -8,9 +8,9 @@ namespace HotelsGarden.Models.Domain.Expedia
     public class HotelUrls
     {
         [JsonProperty("hotelInfositeUrl")]
-        public string HotelInfositeUrl { get; set; }
+        public string InfositeUrl { get; set; }
 
         [JsonProperty("hotelSearchResultUrl")]
-        public string HotelSearchResultUrl { get; set; }
+        public string SearchResultUrl { get; set; }
     }
 }

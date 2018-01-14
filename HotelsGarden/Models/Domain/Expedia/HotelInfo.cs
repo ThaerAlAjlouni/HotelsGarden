@@ -8,52 +8,52 @@ namespace HotelsGarden.Models.Domain.Expedia
     public class HotelInfo
     {
         [JsonProperty("hotelId")]
-        public string HotelId { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("hotelName")]
-        public string HotelName { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty("localizedHotelName")]
-        public string LocalizedHotelName { get; set; }
+        public string LocalizedName { get; set; }
 
         [JsonProperty("hotelDestination")]
-        public string HotelDestination { get; set; }
+        public string Destination { get; set; }
 
         [JsonProperty("hotelDestinationRegionID")]
-        public string HotelDestinationRegionID { get; set; }
+        public string DestinationRegionID { get; set; }
 
         [JsonProperty("hotelLongDestination")]
-        public string HotelLongDestination { get; set; }
+        public string LongDestination { get; set; }
 
         [JsonProperty("hotelStreetAddress")]
-        public string HotelStreetAddress { get; set; }
+        public string StreetAddress { get; set; }
 
         [JsonProperty("hotelCity")]
-        public string HotelCity { get; set; }
+        public string City { get; set; }
 
         [JsonProperty("hotelProvince")]
-        public string HotelProvince { get; set; }
+        public string Province { get; set; }
 
         [JsonProperty("hotelCountryCode")]
-        public string HotelCountryCode { get; set; }
+        public string CountryCode { get; set; }
 
         [JsonProperty("hotelLatitude")]
-        public double HotelLatitude { get; set; }
+        public double Latitude { get; set; }
 
         [JsonProperty("hotelLongitude")]
-        public double HotelLongitude { get; set; }
+        public double Longitude { get; set; }
 
         [JsonProperty("hotelStarRating")]
-        public string HotelStarRating { get; set; }
+        public string StarRating { get; set; }
 
         [JsonProperty("hotelGuestReviewRating")]
-        public double HotelGuestReviewRating { get; set; }
+        public double GuestReviewRating { get; set; }
 
         [JsonProperty("hotelReviewTotal")]
-        public int HotelReviewTotal { get; set; }
+        public int ReviewTotal { get; set; }
 
         [JsonProperty("hotelImageUrl")]
-        public string HotelImageUrl { get; set; }
+        public string ImageUrl { get; set; }
 
         [JsonProperty("vipAccess")]
         public bool VipAccess { get; set; }
