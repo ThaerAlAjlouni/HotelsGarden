@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -33,7 +34,15 @@ namespace HotelsGarden.Services
 
             var data = JsonConvert.DeserializeObject<ExpediaOffers>(stringData);
 
-            return mapper.Map<Offers>(data.Offers);
+            var mappedOffers = mapper.Map<Offers>(data.Offers);
+
+            mappedOffers.Hotels = mappedOffers.Hotels
+                .OrderByDescending(hotel => hotel.HotelInfo.HotelGuestReviewRating)
+                .ThenByDescending(hotel => hotel.HotelInfo.HotelStarRating)
+                .ThenBy(hotel => hotel.HotelPricingInfo.AveragePriceValue)
+                .ToList();
+
+            return mappedOffers;
         }
 
         private string GetQueryString(SearchFilters filters)
