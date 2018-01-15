@@ -15,19 +15,9 @@ namespace HotelsGarden.Models.View
         public int LengthOfStay { get; set; }
 
         [ReadOnly(true)]
-        public string TravelStartDateString {
-            get {
-                return TravelStartDate.ToString(Constants.DateTimeFormat);
-            }
-        }
+        public string TravelStartDateString => TravelStartDate.ToString(Constants.DateFormat);
 
         [ReadOnly(true)]
-        public string TravelEndDateString
-        {
-            get
-            {
-                return TravelEndDate.ToString(Constants.DateTimeFormat);
-            }
-        }
+        public string TravelEndDateString => TravelEndDate.ToString(Constants.DateFormat);
     }
 }

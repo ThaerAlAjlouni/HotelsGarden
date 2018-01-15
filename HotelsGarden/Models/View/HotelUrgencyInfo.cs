@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace HotelsGarden.Models.View
 {
@@ -17,7 +18,10 @@ namespace HotelsGarden.Models.View
         public int NumberOfRoomsLeft { get; set; }
 
         [ReadOnly(true)]
-        public object LastBookedTime { get; set; }
+        public DateTime LastBookedTime { get; set; }
+
+        [ReadOnly(true)]
+        public string LastBookedTimeString => LastBookedTime.ToString(Constants.DateTimeFormat);
 
         [ReadOnly(true)]
         public string AlmostSoldStatus { get; set; }

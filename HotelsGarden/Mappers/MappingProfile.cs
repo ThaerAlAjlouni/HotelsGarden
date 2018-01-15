@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using HotelsGarden.Helpers;
 using HotelsGarden.Models.View;
 
 namespace HotelsGarden.Mappers
@@ -11,11 +12,15 @@ namespace HotelsGarden.Mappers
             CreateMap<Models.Domain.Expedia.Destination, Destination>();
             CreateMap<Models.Domain.Expedia.Hotel, Hotel>();
             CreateMap<Models.Domain.Expedia.HotelPricingInfo, HotelPricingInfo>();
-            CreateMap<Models.Domain.Expedia.HotelUrgencyInfo, HotelUrgencyInfo>();
             CreateMap<Models.Domain.Expedia.OfferInfo, OfferInfo>();
             CreateMap<Models.Domain.Expedia.Offers, Offers>();
             CreateMap<Models.Domain.Expedia.Persona, Persona>();
             CreateMap<Models.Domain.Expedia.UserInfo, UserInfo>();
+
+            CreateMap<Models.Domain.Expedia.HotelUrgencyInfo, HotelUrgencyInfo>()
+                .ForMember(
+                    dest => dest.LastBookedTime,
+                    opts => opts.MapFrom(src => ((long)src.LastBookedTime).ToUtc()));
 
             CreateMap<Models.Domain.Expedia.HotelInfo, HotelInfo>()
                 .ForMember(

@@ -58,5 +58,8 @@ namespace HotelsGarden.Models.View
 
         [ReadOnly(true)]
         public bool IsOfficialRating { get; set; }
+
+        [ReadOnly(true)]
+        public Uri LocationUrl => new Uri($"https://www.google.com/maps/?q={Latitude},{Longitude}");
     }
 }
