@@ -15,24 +15,24 @@ namespace HotelsGarden.Models.View
         public DateTime? MaxTripStartDate { get; set; }
 
         [DisplayName("Length of Stay *")]
-        public int LengthOfStay { get; set; }
+        public int? LengthOfStay { get; set; }
 
         [DisplayName("Minimum Star Rating *")]
-        public double MinStarRating { get; set; }
+        public double? MinStarRating { get; set; }
 
         [DisplayName("Maximum Star Rating *")]
-        public double MaxStarRating { get; set; }
+        public double? MaxStarRating { get; set; }
 
         [DisplayName("Minimum Total Rate *")]
-        public double MinTotalRate { get; set; }
+        public double? MinTotalRate { get; set; }
 
         [DisplayName("Maximum Total Rate *")]
-        public double MaxTotalRate { get; set; }
+        public double? MaxTotalRate { get; set; }
 
         [DisplayName("Minimum Guest Rating *")]
-        public double MinGuestRating { get; set; }
+        public double? MinGuestRating { get; set; }
 
         [DisplayName("Maximum Guest Rating *")]
-        public double MaxGuestRating { get; set; }
+        public double? MaxGuestRating { get; set; }
     }
 }

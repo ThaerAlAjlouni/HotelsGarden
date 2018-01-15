@@ -69,39 +69,39 @@ namespace HotelsGarden.Services
                 queryBuilder.AppendFormat("&maxTripStartDate=:{0}", filters.MaxTripStartDate.Value.ToString(Constants.ApiDateTimeFormat));
             }
 
-            if (filters.LengthOfStay > 0)
+            if (filters.LengthOfStay.HasValue && filters.LengthOfStay.Value > 0)
             {
-                queryBuilder.AppendFormat("&lengthOfStay={0}", filters.LengthOfStay);
+                queryBuilder.AppendFormat("&lengthOfStay={0}", filters.LengthOfStay.Value);
             }
 
-            if (filters.MinGuestRating > 0)
+            if (filters.MinGuestRating.HasValue && filters.MinGuestRating.Value > 0)
             {
-                queryBuilder.AppendFormat("&minGuestRating={0}", filters.MinGuestRating);
+                queryBuilder.AppendFormat("&minGuestRating={0}", filters.MinGuestRating.Value);
             }
 
-            if (filters.MaxGuestRating > 0)
+            if (filters.MaxGuestRating.HasValue && filters.MaxGuestRating.Value > 0)
             {
-                queryBuilder.AppendFormat("&maxGuestRating={0}", filters.MaxGuestRating);
+                queryBuilder.AppendFormat("&maxGuestRating={0}", filters.MaxGuestRating.Value);
             }
 
-            if (filters.MinStarRating > 0)
+            if (filters.MinStarRating.HasValue && filters.MinStarRating.Value > 0)
             {
-                queryBuilder.AppendFormat("&minStarRating={0}", filters.MinStarRating);
+                queryBuilder.AppendFormat("&minStarRating={0}", filters.MinStarRating.Value);
             }
 
-            if (filters.MaxStarRating > 0)
+            if (filters.MaxStarRating.HasValue && filters.MaxStarRating.Value > 0)
             {
-                queryBuilder.AppendFormat("&maxStarRating={0}", filters.MaxStarRating);
+                queryBuilder.AppendFormat("&maxStarRating={0}", filters.MaxStarRating.Value);
             }
 
-            if (filters.MinTotalRate > 0)
+            if (filters.MinTotalRate.HasValue && filters.MinTotalRate.Value > 0)
             {
-                queryBuilder.AppendFormat("&minTotalRate={0}", filters.MinTotalRate);
+                queryBuilder.AppendFormat("&minTotalRate={0}", filters.MinTotalRate.Value);
             }
 
-            if (filters.MaxTotalRate > 0)
+            if (filters.MaxTotalRate.HasValue && filters.MaxTotalRate.Value > 0)
             {
-                queryBuilder.AppendFormat("&maxTotalRate={0}", filters.MaxTotalRate);
+                queryBuilder.AppendFormat("&maxTotalRate={0}", filters.MaxTotalRate.Value);
             }
 
             return queryBuilder.ToString();

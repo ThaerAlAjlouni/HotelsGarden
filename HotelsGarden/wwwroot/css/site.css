@@ -52,6 +52,7 @@
     background-color: #ffcb00;
     color: #00355f;
     border-top: #00355f 1px solid;
+    z-index: 25;
 }
 
 .pointer {
@@ -75,4 +76,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.custom-group > * {
+    border: 1px solid #00355f;
+    border-radius: 4px;
+}
+
+.custom-group .input-group-addon {
+    background-color: #ffcb00;
+    color: #00355f;
 }

@@ -4,44 +4,70 @@
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.DestinationName, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.DestinationName, new { @class = "form-control" })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.DestinationName)">@Html.DisplayNameFor(model => model.Filters.DestinationName)</label>
+            @Html.TextBoxFor(model => model.Filters.DestinationName, new { @class = "form-control", placeholder = "Tell us which city you are intending to visit" })
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.LengthOfStay, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.LengthOfStay, new { @class = "form-control", type = "number", min = 0, step = 1 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.LengthOfStay)">@Html.DisplayNameFor(model => model.Filters.LengthOfStay)</label>
+            @Html.TextBoxFor(model => model.Filters.LengthOfStay, new { @class = "form-control", type = "number", min = 0, step = 1, placeholder = "Tell us how much days you intend to stay" })
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MinGuestRating, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MinGuestRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MinTripStartDate)">@Html.DisplayNameFor(model => model.Filters.MinTripStartDate)</label>
+            @Html.TextBoxFor(model => model.Filters.MinTripStartDate, new { @class = "form-control", type = "date", min = DateTime.Now.ToString(Constants.JavascriptDateTimeFormat) })
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MaxGuestRating, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MaxGuestRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MaxTripStartDate)">@Html.DisplayNameFor(model => model.Filters.MaxTripStartDate)</label>
+            @Html.TextBoxFor(model => model.Filters.MaxTripStartDate, new { @class = "form-control", type = "date", min = DateTime.Now.ToString(Constants.JavascriptDateTimeFormat) })
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MinStarRating, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MinStarRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MinGuestRating)">@Html.DisplayNameFor(model => model.Filters.MinGuestRating)</label>
+            @Html.TextBoxFor(model => model.Filters.MinGuestRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MaxStarRating, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MaxStarRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MaxGuestRating)">@Html.DisplayNameFor(model => model.Filters.MaxGuestRating)</label>
+            @Html.TextBoxFor(model => model.Filters.MaxGuestRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MinTotalRate, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MinTotalRate, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MinStarRating)">@Html.DisplayNameFor(model => model.Filters.MinStarRating)</label>
+            @Html.TextBoxFor(model => model.Filters.MinStarRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MaxTotalRate, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MaxTotalRate, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MaxStarRating)">@Html.DisplayNameFor(model => model.Filters.MaxStarRating)</label>
+            @Html.TextBoxFor(model => model.Filters.MaxStarRating, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MinTripStartDate, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MinTripStartDate, new { @class = "form-control", type = "date", min = DateTime.Now.ToString(Constants.JavascriptDateTimeFormat) })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MinTotalRate)">@Html.DisplayNameFor(model => model.Filters.MinTotalRate)</label>
+            @Html.TextBoxFor(model => model.Filters.MinTotalRate, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
     <div class="form-group col-md-6">
-        @Html.LabelFor(model => model.Filters.MaxTripStartDate, new { @class = "control-label" })
-        @Html.TextBoxFor(model => model.Filters.MaxTripStartDate, new { @class = "form-control", type = "date", min = DateTime.Now.ToString(Constants.JavascriptDateTimeFormat) })
+        <div class="input-group custom-group">
+            <label class="input-group-addon" for="@Html.IdFor(model => model.Filters.MaxTotalRate)">@Html.DisplayNameFor(model => model.Filters.MaxTotalRate)</label>
+            @Html.TextBoxFor(model => model.Filters.MaxTotalRate, new { @class = "form-control", type = "number", min = 0, max = 5, step = 0.25 })
+            <span class="input-group-addon"> / 5</span>
+        </div>
     </div>
 
     <button class="btn btn-primary" type="submit">
@@ -50,5 +76,5 @@
     <button class="btn btn-warning" type="reset">
         Reset
     </button>
-    <blockquote class="text-muted pull-right">* Keep the default value to exclude the filter</blockquote>
+    <small class="text-muted pull-right">* Keep the default value to exclude the filter</small>
 }
