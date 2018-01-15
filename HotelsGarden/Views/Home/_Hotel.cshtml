@@ -14,56 +14,56 @@
     </div>
     <div id="@Model.Info.Id" class="collapse panel-body">
         <div class="row">
-            <div class="col-xs-12 m-t-20 pull-left offer-date-range">
-                <ul class="list-group">
-                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Travel Start Date:</strong> @Model.OfferDateRange.TravelStartDateString</li>
-                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Travel End Date:</strong> @Model.OfferDateRange.TravelEndDateString</li>
-                    <li class="list-group-item col-xs-12 col-md-4"> <strong>Stay:</strong> @Model.OfferDateRange.LengthOfStay @(Model.OfferDateRange.LengthOfStay > 1 ? "Days" : "Day")</li>
+            <div class="col-xs-12 pull-left offer-date-range">
+                <ul class="list-unstyled list-custom">
+                    <li class="col-xs-12 col-md-4"> <strong>Travel Start Date:</strong> @Model.OfferDateRange.TravelStartDateString</li>
+                    <li class="col-xs-12 col-md-4"> <strong>Travel End Date:</strong> @Model.OfferDateRange.TravelEndDateString</li>
+                    <li class="col-xs-12 col-md-4"> <strong>Stay:</strong> @Model.OfferDateRange.LengthOfStay @(Model.OfferDateRange.LengthOfStay > 1 ? "Days" : "Day")</li>
                 </ul>
             </div>
 
-            <div class="col-xs-12 m-t-20 pull-left pricing-info">
-                <ul class="list-group">
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Average Price Value:</strong> $@Model.PricingInfo.AveragePriceValue </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Cross-Out Price Value:</strong> <del>$@Model.PricingInfo.CrossOutPriceValue</del> </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Currency:</strong> @Model.PricingInfo.Currency </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Drr:</strong> @Model.PricingInfo.Drr </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Original Price per Night:</strong> $@Model.PricingInfo.OriginalPricePerNight </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Percent Savings:</strong> @Model.PricingInfo.PercentSavings% </li>
-                    <li class="list-group-item col-xs-12 col-md-12 text-center lead"> <strong>Total Price Value:</strong> $@Model.PricingInfo.TotalPriceValue </li>
+            <div class="col-xs-12 pull-left pricing-info">
+                <ul class="list-unstyled list-custom">
+                    <li class="col-xs-12 col-md-12 text-center lead"> <strong>Total Price Value:</strong> $@Model.PricingInfo.TotalPriceValue </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Average Price Value:</strong> $@Model.PricingInfo.AveragePriceValue </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Cross-Out Price Value:</strong> <del>$@Model.PricingInfo.CrossOutPriceValue</del> </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Currency:</strong> @Model.PricingInfo.Currency </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Drr:</strong> @Model.PricingInfo.Drr </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Original Price per Night:</strong> $@Model.PricingInfo.OriginalPricePerNight </li>
+                    <li class="col-xs-12 col-md-4"> <strong>Percent Savings:</strong> @Model.PricingInfo.PercentSavings% </li>
                 </ul>
             </div>
-            <div class="col-xs-12 m-t-20 pull-left urgency-info">
-                <ul class="list-group">
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Air Attach Enabled:</strong> @Model.UrgencyInfo.AirAttachEnabled </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Air Attach Remaining Time:</strong> @Model.UrgencyInfo.AirAttachRemainingTime </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Almost Sold Status:</strong> @Model.UrgencyInfo.AlmostSoldStatus </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Last Booked Time:</strong> @Model.UrgencyInfo.LastBookedTime </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Link:</strong> @Model.UrgencyInfo.Link </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of People Booked:</strong> @Model.UrgencyInfo.NumberOfPeopleBooked </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of People Viewing:</strong> @Model.UrgencyInfo.NumberOfPeopleViewing </li>
-                    <li class="list-group-item col-xs-12 col-md-6"> <strong>Number Of Rooms Left:</strong> @Model.UrgencyInfo.NumberOfRoomsLeft</li>
-                </ul>
-            </div>
-
-            <div class="col-xs-12 m-t-20 pull-left destination">
-                <ul class="list-group">
-                    <li class="list-group-item col-md-6"> <strong>Associated Multi City Region Id:</strong> @Model.Destination.AssociatedMultiCityRegionId </li>
-                    <li class="list-group-item col-md-6"> <strong>City:</strong> @Model.Destination.City </li>
-                    <li class="list-group-item col-md-6"> <strong>Country:</strong> @Model.Destination.Country </li>
-                    <li class="list-group-item col-md-6"> <strong>Non-Localized City:</strong> @Model.Destination.NonLocalizedCity </li>
-                    <li class="list-group-item col-md-6"> <strong>Province:</strong> @Model.Destination.Province </li>
-                    <li class="list-group-item col-md-6"> <strong>Region ID:</strong> @Model.Destination.RegionID </li>
-                    <li class="list-group-item col-md-6"> <strong>Short Name:</strong> @Model.Destination.ShortName </li>
-                    <li class="list-group-item col-md-6"> <strong>Tla:</strong> @Model.Destination.Tla </li>
-                    <li class="list-group-item col-md-12"> <strong>Long Name:</strong> @Model.Destination.LongName </li>
+            <div class="col-xs-12 pull-left urgency-info">
+                <ul class="list-unstyled list-custom">
+                    <li class="col-xs-12 col-md-3"> <strong>Air Attach Enabled:</strong> @Model.UrgencyInfo.AirAttachEnabled </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Air Attach Remaining Time:</strong> @Model.UrgencyInfo.AirAttachRemainingTime </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Almost Sold Status:</strong> @Model.UrgencyInfo.AlmostSoldStatus </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Last Booked Time:</strong> @Model.UrgencyInfo.LastBookedTime </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Link:</strong> @Model.UrgencyInfo.Link </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Number Of People Booked:</strong> @Model.UrgencyInfo.NumberOfPeopleBooked </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Number Of People Viewing:</strong> @Model.UrgencyInfo.NumberOfPeopleViewing </li>
+                    <li class="col-xs-12 col-md-3"> <strong>Number Of Rooms Left:</strong> @Model.UrgencyInfo.NumberOfRoomsLeft</li>
                 </ul>
             </div>
 
-            <div class="col-xs-12 m-t-20 pull-left Model-urls">
-                <ul class="list-group">
-                    <li class="list-group-item text-ellipsis"> <strong>Info site:</strong> <a href="@Model.Urls.Infosite" target="_blank">@Model.Urls.Infosite</a> </li>
-                    <li class="list-group-item text-ellipsis"> <strong>Search Result:</strong> <a href="@Model.Urls.SearchResult" target="_blank">@Model.Urls.SearchResult</a> </li>
+            <div class="col-xs-12 pull-left">
+                <ul class="list-unstyled list-custom">
+                    <li class="col-md-12"> <strong>Full Name:</strong> @Model.Destination.LongName </li>
+                    <li class="col-md-3"> <strong>Multi City Region Id:</strong> @Model.Destination.AssociatedMultiCityRegionId </li>
+                    <li class="col-md-3"> <strong>City:</strong> @Model.Destination.City </li>
+                    <li class="col-md-3"> <strong>Country:</strong> @Model.Destination.Country </li>
+                    <li class="col-md-3"> <strong>Non-Localized City:</strong> @Model.Destination.NonLocalizedCity </li>
+                    <li class="col-md-3"> <strong>Province:</strong> @Model.Destination.Province </li>
+                    <li class="col-md-3"> <strong>Region ID:</strong> @Model.Destination.RegionID </li>
+                    <li class="col-md-3"> <strong>Short Name:</strong> @Model.Destination.ShortName </li>
+                    <li class="col-md-3"> <strong>Tla:</strong> @Model.Destination.Tla </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 pull-left Model-urls">
+                <ul class="list-unstyled list-custom">
+                    <li class="text-ellipsis"> <strong>Info site:</strong> <a href="@Model.Urls.Infosite" target="_blank">@Model.Urls.Infosite</a> </li>
+                    <li class="text-ellipsis"> <strong>Search Result:</strong> <a href="@Model.Urls.SearchResult" target="_blank">@Model.Urls.SearchResult</a> </li>
                 </ul>
             </div>
         </div>

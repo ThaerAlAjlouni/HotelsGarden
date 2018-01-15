@@ -78,10 +78,23 @@
     overflow: hidden;
 }
 
-.custom-group > * {
-    border: 1px solid #00355f;
-    border-radius: 4px;
+.list-unstyled.list-custom {
+    background: rgba(255, 203, 0, 0.50);
+    color: #00355f;
+    float: left;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
 }
+
+    .list-unstyled.list-custom li {
+        padding: 2px;
+    }
+    
+    .custom-group > * {
+        border: 1px solid #00355f;
+        border-radius: 4px;
+    }
 
 .custom-group .input-group-addon {
     background-color: #ffcb00;
