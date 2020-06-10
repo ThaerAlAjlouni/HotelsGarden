@@ -1,4 +1,4 @@
-# Hotels Garden
+# Hotels Garden [![Build Status](https://travis-ci.org/ThaerAlAjlouni/HotelsGarden.svg?branch=master)](https://travis-ci.org/ThaerAlAjlouni/HotelsGarden)
 A test app built over [Expedia's test API](https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel), you can see it live on [heroku](https://hotels-garden.herokuapp.com/)
 
 # Setup Instructions
